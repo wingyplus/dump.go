@@ -1,0 +1,7 @@
+data/src/pkg/scanner/Makefile.i
+data/.hgignore.i
+data/src/pkg/dump/Makefile.i
+data/src/pkg/scanner/scanner.go.i
+data/src/pkg/scanner/scanner_test.go.i
+data/src/pkg/dump/dump.go.i
+data/src/pkg/dump/dump_test.go.i
