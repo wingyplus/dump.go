@@ -48,6 +48,7 @@ func Fdump(out io.Writer, v_ interface{}) {
 		case r.Array, r.Slice, r.Map, r.Ptr, r.Struct, r.Interface:
 			//addr := v.Addr()
 			key := fmt.Sprintf("%T %v", v.Interface(), v.Type())
+			// if have value in done[key]
 			if _, exists := done[key]; exists {
 				padprefix()
 				fmt.Printf("<%s>", key)
@@ -138,7 +139,7 @@ func Fdump(out io.Writer, v_ interface{}) {
 
 		case r.String:
 			padprefix()
-			printv(strconv.Quote(v.Internal.(string)))
+			fmt.Fprintf(out, "(%v) %v", v.Type(), strconv.Quote(v.Interface().(string)))
 		
 		case r.Bool,
 			r.Int, r.Int8, r.Int16, r.Int32, r.Int64,

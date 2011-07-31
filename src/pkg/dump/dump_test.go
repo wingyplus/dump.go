@@ -3,9 +3,9 @@ package dump_test
 import (
 	. "dump"
 	"testing"
-	//"go/parser"
+//	"go/parser"
 	"go/token"
-	// "fmt"
+//	"fmt"
 )
 
 
@@ -29,13 +29,14 @@ func TestDump(t *testing.T) {
 	// empty
 
 	// func ParseFile(filename string, src interface{}, scope *ast.Scope, mode uint) (*ast.File, os.Error)
-
-	// file, e := parser.ParseFile("dump_test.go", nil, nil, parser.ParseComments)
-	// if e != nil {
-	//	fmt.Println("error", e)
-	// } else {
-		//fmt.Printf("%#v\n", file);
-	//	Dump(file)
+/*
+	file, e := parser.ParseFile(nil, "dump_test.go", nil, parser.ParseComments)
+	if e != nil {
+		fmt.Println("error", e)
+	} else {
+*/
+//		fmt.Printf("%#v\n", file);
+//		Dump(file)
 		Dump(map[string]int{"satu": 1, "dua": 2})
 		Dump([]int{1, 2, 3})
 		Dump([3]int{1, 2, 3})
@@ -50,5 +51,5 @@ func TestDump(t *testing.T) {
 		bulet[2].c = &bulet[0]
 
 		Dump(struct{ a []Circular }{bulet})
-	// }
+//	}
 }
