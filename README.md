@@ -21,5 +21,6 @@ Outputs:
 
 ### Installation ###
 Follow this command:
+
     $ make
     $ make install
