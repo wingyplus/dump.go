@@ -5,6 +5,7 @@ import (
 	"testing"
 //	"go/parser"
 	"go/token"
+	"exec"
 //	"fmt"
 )
 
@@ -51,5 +52,7 @@ func TestDump(t *testing.T) {
 		bulet[2].c = &bulet[0]
 
 		Dump(struct{ a []Circular }{bulet})
+	cmd := exec.Command("ls", "-la")
+	Dump(cmd)
 //	}
 }

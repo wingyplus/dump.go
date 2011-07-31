@@ -139,7 +139,7 @@ func Fdump(out io.Writer, v_ interface{}) {
 
 		case r.String:
 			padprefix()
-			fmt.Fprintf(out, "(%v) %v", v.Type(), strconv.Quote(v.Interface().(string)))
+			fmt.Fprintf(out, "%v", strconv.Quote(v.Interface().(string)))
 		
 		case r.Bool,
 			r.Int, r.Int8, r.Int16, r.Int32, r.Int64,
