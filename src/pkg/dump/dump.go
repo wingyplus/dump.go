@@ -47,7 +47,7 @@ func Fdump(out io.Writer, v_ interface{}) {
 		switch v.Kind() {
 		case r.Array, r.Slice, r.Map, r.Ptr, r.Struct, r.Interface:
 			//addr := v.Addr()
-			key := fmt.Sprintf("%T %v", v.Interface(), v.Type())
+			key := fmt.Sprintf("%p %v", v.Interface(), v.Type())
 			// if have value in done[key]
 			if _, exists := done[key]; exists {
 				padprefix()
