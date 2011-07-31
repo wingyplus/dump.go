@@ -1,4 +1,4 @@
-# Dump.go
+1# Dump.go
 this project is fork repository from [googlecode](http://code.google.com/p/golang/)
 
 *	dump, an utility to dump Go variables, similar to PHP's [var_dump](http://php.net/manual/en/function.var-dump.php)
@@ -18,3 +18,8 @@ Outputs:
 	  <[]int []int>,
 	  <[]int []int>
 	}
+
+### Installation ###
+Follow this command:
+    $ make
+    $ make install
