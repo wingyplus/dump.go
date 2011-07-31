@@ -1,4 +1,4 @@
-1# Dump.go
+# Dump.go Version 0.1 #
 this project is fork repository from [googlecode](http://code.google.com/p/golang/)
 
 *	dump, an utility to dump Go variables, similar to PHP's [var_dump](http://php.net/manual/en/function.var-dump.php)
